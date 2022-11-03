@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Walmart Demo</string>
+    <string name="no_internet_string">No Internet Connection.</string>
+    <string name="home_message">Loading Data</string>
+</resources>
