@@ -7,7 +7,7 @@ import com.akshat.walmartdemo.repository.CountiresRepository
 @Suppress("UNCHECKED_CAST")
 class CountriesViewModelFactory(
     private val repository: CountiresRepository
-): ViewModelProvider.NewInstanceFactory() {
+) : ViewModelProvider.NewInstanceFactory() {
 
     override fun <T : ViewModel> create(modelClass: Class<T>): T {
         return CountriesViewModel(repository) as T

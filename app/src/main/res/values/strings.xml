@@ -2,4 +2,8 @@
     <string name="app_name">Walmart Demo</string>
     <string name="no_internet_string">No Internet Connection.</string>
     <string name="home_message">Loading Data</string>
+    <string name="countryName">Country Name</string>
+    <string name="countryCode">Country Code</string>
+    <string name="countryCapital">Country Capital</string>
+
 </resources>

@@ -13,8 +13,7 @@ class CountriesViewModel(
     private val repository: CountiresRepository
 ) : ViewModel() {
 
-    //var authListener: ServiceHomeRecyclerViewClickListener? = null
-    private val _providedData = MutableLiveData<List<ResponseItem>>()
+    private val _providedData: MutableLiveData<List<ResponseItem>> = MutableLiveData<List<ResponseItem>>()
     val providedData: LiveData<List<ResponseItem>>
         get() = _providedData
 
@@ -24,10 +23,8 @@ class CountriesViewModel(
             try {
                 val url = Constants.endPoint
                 val authResponse = repository.getCountriesData(url)
-                if (authResponse.response!=null) {
-                    _providedData.value = authResponse.response
-                    return@main
-                }
+                _providedData.value = authResponse
+                return@main
             } catch (e: ApiExceptions) {
              //   authListener?.onFailure(e.message!!)
             }

@@ -1,6 +1,7 @@
 package com.akshat.walmartdemo.network
 
 import com.akshat.walmartdemo.BuildConfig
+import com.akshat.walmartdemo.model.ResponseItem
 import com.akshat.walmartdemo.utils.Constants
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
@@ -14,7 +15,7 @@ import retrofit2.http.Url
 interface CountriesAPI {
 
     @GET
-    suspend fun getCountriesData(@Url url: String): Response<com.akshat.walmartdemo.model.Response>
+    suspend fun getCountriesData(@Url url: String): Response<List<ResponseItem>>
 
     companion object {
 

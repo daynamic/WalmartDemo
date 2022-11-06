@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="Countries"
+            type="com.akshat.walmartdemo.model.ResponseItem" />
+
+    </data>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_2"
+        android:background="@color/gray_divider">
+
+
+        <RelativeLayout
+            android:id="@+id/top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:padding="@dimen/margin_5">
+
+
+            <TextView
+                android:id="@+id/countryName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/margin_15"
+                android:fontFamily="@font/mitrregular"
+                android:text="@{Countries.name+` , ` + Countries.region}"
+                android:textSize="@dimen/text_Size_16" />
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/countryCode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/mitrlight"
+                    android:padding="@dimen/margin_1"
+                    android:text="@{Countries.code}"
+                    android:textSize="@dimen/text_Size_15" />
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/top"
+            android:background="@color/white"
+            android:padding="@dimen/margin_5">
+
+            <TextView
+                android:id="@+id/countryCapital"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="@dimen/margin_15"
+                android:fontFamily="@font/mitrlight"
+                android:text="@{Countries.capital}"
+                android:textSize="@dimen/text_Size_15" />
+
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+</layout>
